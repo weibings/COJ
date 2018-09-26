@@ -30,7 +30,7 @@ export class NewProblemComponent implements OnInit {
     this.newProblem = Object.assign({}, DEFAULT_PROBLEM);
   }
 
-  isAdmin(): boolean{
-    return this.authGuard.isAdmin();
-  }
+  // isAdmin(): boolean{
+  //   return this.authGuard.isAdmin();
+  // }
 }

@@ -10,7 +10,8 @@ import { DataService } from '../../services/data.service';
   providers: [DataService]
 })
 export class ProblemDetailComponent implements OnInit {
-  problem: Problem
+  problem: Problem;
+
   constructor(
     private route : ActivatedRoute,
     private data : DataService) { }

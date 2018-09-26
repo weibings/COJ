@@ -3,9 +3,7 @@ import {Problem} from '../models/problem.model';
 //import {PROBLEMS} from '../mock-problems';
 import {HttpClient, HttpResponse, HttpHeaders} from '@angular/common/http';
 import {BehaviorSubject, Observable} from 'rxjs';
-import { catchError, tap} from 'rxjs/operators';
 //import {Observable} from 'rxjs/Rx';
-// import 'rxjs/add/operator/toPromise';
 
 @Injectable({
   providedIn: 'root'

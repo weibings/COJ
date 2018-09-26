@@ -573,18 +573,18 @@ if(false) {}
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!******************************************************************************!*\
   !*** multi ./node_modules/bootstrap/dist/css/bootstrap.css ./src/styles.css ***!
   \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/binwei/Desktop/projects/week2/oj-client/node_modules/bootstrap/dist/css/bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
-module.exports = __webpack_require__(/*! /home/binwei/Desktop/projects/week2/oj-client/src/styles.css */"./src/styles.css");
+__webpack_require__(/*! /home/binwei/Desktop/COJ/oj-client/node_modules/bootstrap/dist/css/bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
+module.exports = __webpack_require__(/*! /home/binwei/Desktop/COJ/oj-client/src/styles.css */"./src/styles.css");
 
 
 /***/ })
 
-},[[2,"runtime"]]]);
+},[[3,"runtime"]]]);
 //# sourceMappingURL=styles.js.map

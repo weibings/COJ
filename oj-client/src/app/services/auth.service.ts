@@ -25,10 +25,11 @@ export class AuthService {
 
 constructor(public router: Router, private http: HttpClient) {}
 
-public login(): void {
+public login(): any {
   this.auth0.authorize();
+  }
 
-}
+
 public handleAuthentication(): void {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {

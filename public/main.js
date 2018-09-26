@@ -107,18 +107,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _components_problem_list_problem_list_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/problem-list/problem-list.component */ "./src/app/components/problem-list/problem-list.component.ts");
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./services/data.service */ "./src/app/services/data.service.ts");
-/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
-/* harmony import */ var _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./services/auth-guard.service */ "./src/app/services/auth-guard.service.ts");
-/* harmony import */ var _components_problem_detail_problem_detail_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/problem-detail/problem-detail.component */ "./src/app/components/problem-detail/problem-detail.component.ts");
-/* harmony import */ var _components_new_problem_new_problem_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/new-problem/new-problem.component */ "./src/app/components/new-problem/new-problem.component.ts");
-/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/profile/profile.component */ "./src/app/components/profile/profile.component.ts");
+/* harmony import */ var _services_collaboration_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./services/collaboration.service */ "./src/app/services/collaboration.service.ts");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./services/auth-guard.service */ "./src/app/services/auth-guard.service.ts");
+/* harmony import */ var _components_problem_detail_problem_detail_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/problem-detail/problem-detail.component */ "./src/app/components/problem-detail/problem-detail.component.ts");
+/* harmony import */ var _components_new_problem_new_problem_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/new-problem/new-problem.component */ "./src/app/components/new-problem/new-problem.component.ts");
+/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/profile/profile.component */ "./src/app/components/profile/profile.component.ts");
+/* harmony import */ var _components_editor_editor_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/editor/editor.component */ "./src/app/components/editor/editor.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -141,10 +145,11 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
                 _components_problem_list_problem_list_component__WEBPACK_IMPORTED_MODULE_6__["ProblemListComponent"],
-                _components_problem_detail_problem_detail_component__WEBPACK_IMPORTED_MODULE_10__["ProblemDetailComponent"],
-                _components_new_problem_new_problem_component__WEBPACK_IMPORTED_MODULE_11__["NewProblemComponent"],
-                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_12__["NavbarComponent"],
-                _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_13__["ProfileComponent"]
+                _components_problem_detail_problem_detail_component__WEBPACK_IMPORTED_MODULE_11__["ProblemDetailComponent"],
+                _components_new_problem_new_problem_component__WEBPACK_IMPORTED_MODULE_12__["NewProblemComponent"],
+                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_13__["NavbarComponent"],
+                _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_14__["ProfileComponent"],
+                _components_editor_editor_component__WEBPACK_IMPORTED_MODULE_15__["EditorComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -152,7 +157,7 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
             ],
-            providers: [_services_data_service__WEBPACK_IMPORTED_MODULE_7__["DataService"], _services_auth_service__WEBPACK_IMPORTED_MODULE_8__["AuthService"], _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__["AuthGuardService"]],
+            providers: [_services_data_service__WEBPACK_IMPORTED_MODULE_7__["DataService"], _services_auth_service__WEBPACK_IMPORTED_MODULE_9__["AuthService"], _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_10__["AuthGuardService"], _services_collaboration_service__WEBPACK_IMPORTED_MODULE_8__["CollaborationService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
@@ -228,6 +233,119 @@ var routingModule = /** @class */ (function () {
 }());
 
 ;
+
+
+/***/ }),
+
+/***/ "./src/app/components/editor/editor.component.css":
+/*!********************************************************!*\
+  !*** ./src/app/components/editor/editor.component.css ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "@media screen {\n    #editor {\n      /* position: absolute; */\n\n      width:600px;\n      height: 600px;\n    }\n    .lang-select {\n      width: 100px;\n      margin-right: 10px;\n    }\n    header .btn {\n      margin: 0 5px;\n    }\n    footer .btn {\n      margin: 0 5px;\n    }\n    .editor-footer, .editor-header {\n      margin: 10px 0;\n    }\n    .cursor {\n      /*position:absolute;*/\n      background: rgba(0, 250, 0, 0.5);\n      z-index: 40;\n      width: 2px !important;\n    }\n}\n"
+
+/***/ }),
+
+/***/ "./src/app/components/editor/editor.component.html":
+/*!*********************************************************!*\
+  !*** ./src/app/components/editor/editor.component.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<section>\n  <header class=\"editor-header\">\n    <div class=\"row\">\n    <select class=\"form-control pull-left lang-select\" name=\"language\" [(ngModel)]=\"language\" (change)=\"setLanguage(language)\">\n      <option *ngFor=\"let language of languages\" [value]=\"language\">\n        {{language}}\n      </option>\n    </select>\n​\n    <!-- reset button -->\n    <!-- Button trigger modal -->\n    <button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#myModal\">\n      <span class=\"glyphicon glyphicon-refresh\" aria-hidden=\"true\"></span>\n    </button>\n  </div>\n    <!-- Modal -->\n    <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\">\n      <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n          <div class=\"modal-header\">\n            <h5 class=\"modal-title\" id=\"myModalLabel\">Reset</h5>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n              <span aria-hidden=\"true\">&times;</span>\n            </button>\n          </div>\n\n          <div class=\"modal-body\">\n            You will lose current code in the window, are you sure?\n          </div>\n          <div class=\"modal-footer\">\n            <button type=\"button\" class=\"btn btn-success\" data-dismiss=\"modal\" (click)=\"resetEditor()\">Reset</button>\n            <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Cancel</button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </header>\n\n  <div class=\"row\">\n      <div id=\"editor\"></div>\n  </div>\n  <div>\n  {{output}}\n</div>\n​\n<footer class=\"editor-footer\">\n  <button type=\"button\" class=\"btn btn-success pull-right\" (click)=\"submit()\">Submit Solution</button>\n</footer>\n</section>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/editor/editor.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/components/editor/editor.component.ts ***!
+  \*******************************************************/
+/*! exports provided: EditorComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditorComponent", function() { return EditorComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_collaboration_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/collaboration.service */ "./src/app/services/collaboration.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var EditorComponent = /** @class */ (function () {
+    function EditorComponent(collaboration, route) {
+        this.collaboration = collaboration;
+        this.route = route;
+        this.languages = ['Java', 'Python'];
+        this.language = 'Java';
+        this.defaultContent = {
+            'Java': "public class Example {\n      public static void main(String[] args) {\n          // Type your Java code here\n      }\n    }",
+            'C++': "#include <iostream>\n    using namespace std;\n    \u200B\n    int main() {\n       // Type your C++ code here\n       return 0;\n     }",
+            'Python': "class Solution:\n     def example():\n     # Write your Python code here"
+        };
+    }
+    EditorComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params
+            .subscribe(function (params) {
+            _this.sessionId = params['id'];
+            _this.initEditor();
+        });
+    };
+    EditorComponent.prototype.initEditor = function () {
+        var _this = this;
+        this.editor = ace.edit('editor');
+        this.editor.setTheme('ace/theme/eclipse');
+        this.resetEditor();
+        this.editor.setValue(this.defaultContent['Java']);
+        this.editor.$blockScrolling = Infinity;
+        document.getElementsByTagName('textarea')[0].focus();
+        this.collaboration.init(this.editor, this.sessionId);
+        this.editor.lastAppliedChange = null;
+        this.editor.on("change", function (e) {
+            console.log('editor changes: ' + JSON.stringify(e));
+            if (_this.editor.lastAppliedChange != e) {
+                _this.collaboration.change(JSON.stringify(e));
+            }
+        });
+    };
+    EditorComponent.prototype.resetEditor = function () {
+        this.editor.setValue(this.defaultContent[this.language]);
+        this.editor.session.setMode("ace/mode/" + this.language.toLowerCase());
+    };
+    EditorComponent.prototype.setLanguage = function (language) {
+        this.language = language;
+        this.resetEditor();
+    };
+    EditorComponent.prototype.submit = function () {
+        var user_code = this.editor.getValue();
+        console.log("The user code is --------------");
+        console.log(user_code);
+    };
+    EditorComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-editor',
+            template: __webpack_require__(/*! ./editor.component.html */ "./src/app/components/editor/editor.component.html"),
+            styles: [__webpack_require__(/*! ./editor.component.css */ "./src/app/components/editor/editor.component.css")],
+            providers: [_services_collaboration_service__WEBPACK_IMPORTED_MODULE_1__["CollaborationService"]]
+        }),
+        __metadata("design:paramtypes", [_services_collaboration_service__WEBPACK_IMPORTED_MODULE_1__["CollaborationService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+    ], EditorComponent);
+    return EditorComponent;
+}());
+
 
 
 /***/ }),
@@ -339,7 +457,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"isAdmin()\">\n  <form #formRef=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"problemName\">Problem Name</label>\n      <input type=\"text\" class=\"form-control\" id=\"problemName\"\n      name=\"problemName\" required placeholder=\"Enter Problem Name\" [(ngModel)]=\"newProblem.name\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"problemDesc\">Problem Description</label>\n      <textarea type=\"text\" row=\"3\" class=\"form-control\" id=\"problemDesc\"\n      name=\"problemDesc\" required placeholder=\"Enter Problem Description\" [(ngModel)]=\"newProblem.desc\"></textarea>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"difficulty\">Difficulty</label>\n      <select type=\"text\" class=\"form-control\" id=\"difficulty\"\n      name=\"difficulty\" [(ngModel)]=\"newProblem.difficulty\">\n      <option *ngFor=\"let difficulty of difficulties\" [value] = difficulty>\n        {{difficulty}}\n      </option>\n    </select>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <button type=\"submit\" class=\"btn btn-primary float-right\" (click)=\"addProblem()\">Add Problem</button>\n      </div>\n    </div>\n  </form>\n</div>\n"
+module.exports = "<div>\n  <form #formRef=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"problemName\">Problem Name</label>\n      <input type=\"text\" class=\"form-control\" id=\"problemName\"\n      name=\"problemName\" required placeholder=\"Enter Problem Name\" [(ngModel)]=\"newProblem.name\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"problemDesc\">Problem Description</label>\n      <textarea type=\"text\" row=\"3\" class=\"form-control\" id=\"problemDesc\"\n      name=\"problemDesc\" required placeholder=\"Enter Problem Description\" [(ngModel)]=\"newProblem.desc\"></textarea>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"difficulty\">Difficulty</label>\n      <select type=\"text\" class=\"form-control\" id=\"difficulty\"\n      name=\"difficulty\" [(ngModel)]=\"newProblem.difficulty\">\n      <option *ngFor=\"let difficulty of difficulties\" [value] = difficulty>\n        {{difficulty}}\n      </option>\n    </select>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <button type=\"submit\" class=\"btn btn-primary float-right\" (click)=\"addProblem()\">Add Problem</button>\n      </div>\n    </div>\n  </form>\n</div>\n"
 
 /***/ }),
 
@@ -388,9 +506,6 @@ var NewProblemComponent = /** @class */ (function () {
             .catch(function (error) { return console.log(error); });
         this.newProblem = Object.assign({}, DEFAULT_PROBLEM);
     };
-    NewProblemComponent.prototype.isAdmin = function () {
-        return this.authGuard.isAdmin();
-    };
     NewProblemComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-new-problem',
@@ -425,7 +540,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" *ngIf=\"problem\">\n  <div class=\"col-xs-12 col-md-8\">\n    <div>\n      <br />\n      <h2>\n        {{problem.id}}. {{problem.name}}\n      </h2>\n      <p>\n        {{problem.desc}}\n      </p>\n      <br />\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"container\" *ngIf=\"problem\">\n  <div class=\"col-xs-12 col-md-8\">\n    <div>\n      <br />\n      <h2>\n        {{problem.id}}. {{problem.name}}\n      </h2>\n      <p>\n        {{problem.desc}}\n      </p>\n      <br />\n    </div>\n  </div>\n  <div class=\"hidden-xs col-sm-12 col-md-0\">\n    <app-editor></app-editor>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -685,20 +800,6 @@ var AuthGuardService = /** @class */ (function () {
         }
         return true;
     };
-    AuthGuardService.prototype.isAdmin = function () {
-        if (this.auth.isAuthenticated()) {
-            this.auth.getProfile(function (err, profile) {
-                console.log("keys: " + Object.keys(profile));
-                if (profile.roles.includes("Admin")) {
-                    return true;
-                }
-                else {
-                    return false;
-                }
-            });
-        }
-        return false;
-    };
     AuthGuardService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __metadata("design:paramtypes", [_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
@@ -838,6 +939,98 @@ var AuthService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/collaboration.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/services/collaboration.service.ts ***!
+  \***************************************************/
+/*! exports provided: CollaborationService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CollaborationService", function() { return CollaborationService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! socket.io-client */ "./node_modules/socket.io-client/lib/index.js");
+/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(socket_io_client__WEBPACK_IMPORTED_MODULE_1__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CollaborationService = /** @class */ (function () {
+    function CollaborationService() {
+        this.clientsInfo = {};
+        this.clientNum = 0;
+    }
+    CollaborationService.prototype.init = function (editor, sessionId) {
+        this.collaborationSocket = socket_io_client__WEBPACK_IMPORTED_MODULE_1___default()(window.location.origin, { query: 'sessionId=' + sessionId });
+        this.collaborationSocket.on("change", function (delta) {
+            console.log('collaboration: editor changes by ' + delta);
+            delta = JSON.parse(delta);
+            editor.lastAppliedChange = delta;
+            editor.getSession().getDocument().applyDeltas([delta]);
+        });
+        // this.collaborationSocket.on("cursorMove", (cursor) => {
+        //   console.log("cursor move: " + cursor);
+        //   let session = editor.getSession();
+        //   cursor = JSON.parse(cursor);
+        //   let x = cursor['row'];
+        //   let y = cursor['column'];
+        //   let changeClientId = cursor['socketId'];
+        //   console.log(x + ' ' + y + ' ' + changeClientId);
+        //
+        //   if (changeClientId in this.clientsInfo) {
+        //     session.removeMarker(this.clientsInfo[changeClientId]['marker']);
+        //   } else {
+        //     this.clientsInfo[changeClientId] = {};
+        //
+        //     let css = document.createElement("style");
+        //     css.type = "text/css";
+        //     css.innerHTML = ".editor_cursor_" + changeClientId
+        //         + " { position:absolute; background:" + COLORS[this.clientNum] + ";"
+        //         + " z-index: 100; width:3px !important; }";
+        //
+        //     document.body.appendChild(css);
+        //     this.clientNum++;
+        //   }
+        //
+        //   let Range = ace.require('ace/range').Range;
+        //   let newMarker = session.addMarker(new Range(x, y, x, y + 1), 'editor_cursor_' + changeClientId, true);
+        //   this.clientsInfo[changeClientId]['marker'] = newMarker;
+        // });
+        // Test
+        this.collaborationSocket.on("message", function (message) {
+            console.log("received: " + message);
+        });
+    };
+    CollaborationService.prototype.change = function (delta) {
+        this.collaborationSocket.emit("change", delta);
+    };
+    CollaborationService.prototype.cursorMove = function (cursor) {
+        this.collaborationSocket.emit("cursorMove", cursor);
+    };
+    CollaborationService.prototype.restoreBuffer = function () {
+        this.collaborationSocket.emit("restoreBuffer");
+    };
+    CollaborationService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], CollaborationService);
+    return CollaborationService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/data.service.ts":
 /*!******************************************!*\
   !*** ./src/app/services/data.service.ts ***!
@@ -865,7 +1058,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 //import {Observable} from 'rxjs/Rx';
-// import 'rxjs/add/operator/toPromise';
 var DataService = /** @class */ (function () {
     function DataService(http) {
         this.http = http;
@@ -977,8 +1169,19 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/binwei/Desktop/projects/week2/oj-client/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/binwei/Desktop/COJ/oj-client/src/main.ts */"./src/main.ts");
 
+
+/***/ }),
+
+/***/ 1:
+/*!********************!*\
+  !*** ws (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ })
 

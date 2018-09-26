@@ -15,18 +15,18 @@ export class AuthGuardService implements CanActivate {
     return true;
   }
 
-  isAdmin(): boolean {
-    if(this.auth.isAuthenticated()){
-      this.auth.getProfile((err, profile)=>{
-        console.log("keys: "+Object.keys(profile));
-        if(profile.roles.includes("Admin")){
-          return true;
-        }else{
-          return false;
-        }
-      });
-    }
-    return false;
-  }
+  // isAdmin(): boolean {
+  //   if(this.auth.isAuthenticated()){
+  //     this.auth.getProfile((err, profile)=>{
+  //       console.log("keys: "+Object.keys(profile));
+  //       if(profile.roles.includes("Admin")){
+  //         return true;
+  //       }else{
+  //         return false;
+  //       }
+  //     });
+  //   }
+  //   return false;
+  // }
 
 }

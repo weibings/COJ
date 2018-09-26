@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "@auth0/angular-jwt": "^2.0.0",
+    "ace-builds": "^1.4.1",
     "auth0-js": "^9.7.3",
     "auth0-lock": "^11.9.1",
     "bootstrap": "^4.1.3",
